@@ -175,6 +175,13 @@ jobs:
       - uses: chartboost/ruff-action@v1
 ```
 
+Ruff can be used as a formatter in Emacs using the [Apheleia](https://github.com/radian-software/apheleia) formatter library, by setting this configuration:
+
+```emacs-lisp
+(add-to-list 'apheleia-mode-alist '(python-mode . ruff))
+(add-to-list 'apheleia-mode-alist '(python-ts-mode . ruff))
+```
+
 ### Configuration
 
 Ruff can be configured through a `pyproject.toml`, `ruff.toml`, or `.ruff.toml` file (see:
